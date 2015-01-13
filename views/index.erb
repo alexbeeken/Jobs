@@ -1,0 +1,31 @@
+<<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <h1>Resume</h1>
+
+    <h2>Pierre Toussant</h2>
+
+    <p>Part time fast food worker, health inspector, ebola specialist </p>
+
+    <h3>Employment History</h3>
+
+    <% @jobs.each() do |job| %>
+    <%= "<p> I was a #{job[0]} for #{job[1]} in #{job[2]} </p>" %>
+    <% end %>
+
+    <form action="/add_job" method="post">
+      <input type="text" name="title" placeholder="Job Title">
+      <input type="text" name="company_name" placeholder="Company">
+      <input type="text" name="location" placeholder="Company City">
+
+      <input type="submit" value="add job">
+    </form>
+
+    <form action="/clear" method="post">
+      <input type="submit" value="clear">
+    </form>
+
+  </body>
+</html>
