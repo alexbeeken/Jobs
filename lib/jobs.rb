@@ -30,4 +30,8 @@ class Jobs
   define_singleton_method(:clear) do
     @@descriptions = []
   end
+
+  define_singleton_method(:delete_last_entry) do
+    @@descriptions.pop()
+end
 end

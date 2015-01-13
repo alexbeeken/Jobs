@@ -21,3 +21,8 @@ post('/clear') do
   Jobs.clear()
   redirect '/'
 end
+
+post('/delete') do
+  Jobs.delete_last_entry
+  redirect '/'
+end
