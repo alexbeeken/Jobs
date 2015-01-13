@@ -23,6 +23,6 @@ post('/clear') do
 end
 
 post('/delete') do
-  Jobs.delete_last_entry
+    Jobs.delete_at_index(params.fetch('hidden_num').to_i)
   redirect '/'
 end

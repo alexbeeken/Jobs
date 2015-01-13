@@ -19,6 +19,10 @@ class Jobs
     @description_job
   end
 
+  define_singleton_method(:delete_at_index) do |index|
+    @@descriptions.delete_at(index)
+  end
+
 # CLASS METHODS
 
 @@descriptions = []
